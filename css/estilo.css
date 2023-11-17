@@ -86,43 +86,43 @@ h1, h2, h3 {
   display: none;
 }
 /*Navegação*/
-nav{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #4a0444;
-	height: 75px;
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4a0444;
+    height: 75px;
 }
 
-nav > a{
-	text-decoration: none;
-	color: #FFFFFF;
-	font-weight: 200;
-	font-size: 25px;
-	font-family: Yellowtail, sans-serif;
-	padding: -10px;
+nav > a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 400; /* Adjust the font weight as needed */
+    font-size: 25px;
+    font-family: Yellowtail, sans-serif;
+    padding: 10px; /* Add a unit to the padding */
 }
 
-nav ul{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	list-style: none;
-	padding: 0;
-	width: 100%;
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
 }
 
-nav ul li{
-	text-align: center;
-	width: 100%;
+nav ul li {
+    text-align: center;
+    width: 100%;
 }
 
-nav ul li a{
-	display: inline-block;
-	padding: -10 px 0;
-	width: 100%;
-	text-decoration: none;
-	color: #FFFFFF;
+nav ul li a {
+    display: inline-block;
+    padding: 10px 0; /* Add a unit to the padding */
+    width: 100%;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 /* cabeçalho */
@@ -137,7 +137,7 @@ header{
 	background-position: center;
 	color: #FFFFFF;
 	text-align: center;
-	padding: 100px;
+	padding: 10vh;
 	overflow: hidden;
 	opacity: 0.75;
 
@@ -348,6 +348,7 @@ footer a{
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
+		height: auto;
 	}
 
 	nav ul{
@@ -357,10 +358,15 @@ footer a{
 		width: 70%;
 	}
 
+    nav > a {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
 	header{
 		height: 250px;
 		height: 30vh;
 		justify-content: center;
+		padding: 8vh;
 	}
 
 	#sobre{
@@ -414,6 +420,18 @@ footer a{
 	#contato h2, #contato p{
 		width: 100%;
 	}
+
+	.slider > .slider-content > .slider-item {
+		max-height: 200px; /* Adjust max-height for tablets */
+    }
+
+    #texto h1 {
+        font-size: 60px; /* Adjust font size for tablets */
+    }
+
+    #texto p {
+		font-size: 18px; /* Adjust font size for tablets */
+    }
 }
 
 .fotologo img{
@@ -449,7 +467,7 @@ footer a{
 }
 .slider-content img{
 	height: auto;
-	width: 100%;%;
+	width: 100%;
 	border-radius: 0.5;
 
 }
@@ -473,6 +491,7 @@ footer a{
 	font-family:'Permanent Marker';
 	font-size: 80px;
 	text-decoration: underline;
+	margin-bottom: 0.5em;
 
 }
 #texto{
@@ -488,7 +507,7 @@ footer a{
 	color: #000000;
 	font-family:"verdana";
 	font-size: 20px;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	text-align: justify;
 }
 
@@ -540,4 +559,34 @@ footer a{
 	font-height: 10px;
 	color: #462752;
 	border-bottom: 2px solid #1a0721;
+}
+
+@media only screen and (max-width: 480px) {
+ 	nav > a {
+		font-size: 18px; /* Further adjust font size for smaller screens */
+	    }
+	nav{
+		display: flex;
+		
+		align-items: center;
+		justify-content: space-around;
+		height: auto;
+		width: auto;
+	}
+
+	header{
+		padding: 10vh;
+	}
+
+	.slider > .slider-content > .slider-item {
+        max-height: 150px; /* Adjust max-height for mobile devices */
+    }
+    #texto h1 {
+        font-size: 30px; /* Adjust font size for mobile devices */
+    }
+
+    #texto p {
+        font-size: 16px; /* Adjust font size for mobile devices */
+    }
+
 }
